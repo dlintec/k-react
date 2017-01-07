@@ -3,11 +3,12 @@ import React, { Component, PropTypes  } from 'react';
 export default class BarChart extends Component {
 	  constructor(props) {
 	    super(props);
+			this.updateChart=this.updateChart.bind(this);
 		}
 
 	updateChart(props) {
 	    var data = props.data;
-
+       console.log("updateChart...",this,data);
 	    var max = _.max(_.pluck(data, "qty"));
   		var yScale = d3.scale.linear()
 	      .domain([0, max])

@@ -1,4 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes  } from 'react';
+import { Meteor } from 'meteor/meteor'
+
+import BeerForm from '/imports/ui/components/beer/beerform.jsx';
+import BeerList from '/imports/ui/components/beer/beerlist.jsx';
+import BarChart from '/imports/ui/components/beer/barchart.jsx';
+import TrackerReact from 'meteor/ultimatejs:tracker-react';
+
 
 // define and export our Layout component
 //export const beerAppLayout = (props) => props.content(props);
@@ -10,21 +17,24 @@ export const beerAppLayout = ({content}) => (
 );
 */
 //const beerApp = React.createClass({
-export default class beerApp extends Component {
+export default class beerApp extends TrackerReact(React.Component) {
   constructor(props) {
     super(props);
-    console.log("constructor beerApp...");
-    this.beersHandle = Meteor.subscribe('beersPub');
-
+    this.state = {
+      subscription: {
+        beersSub: Meteor.subscribe('beersPub')
+      }
+    }
   };
-	getData() {
+  componentWillUnmount() {
+      this.state.subscription.beersSub.stop();
+  }
+
+  getBeers() {
+      return Beers.find({}).fetch(); //fetch must be called to trigger reactivity
+  }
 
 
-      return {
-        ready:this.beersHandle.ready(),
-				beers:Beers.find({}).fetch()
-			}
-  	};
 
   	mapData() {
   		var data = [
@@ -41,6 +51,7 @@ export default class beerApp extends Component {
   	};
 
 	render() {
+    console.log("render BeerApp.jsx ");
 		return (
       <div>
 
@@ -56,11 +67,11 @@ export default class beerApp extends Component {
   				<div className="row">
   					<div className="col-md-4">
   						<BeerForm />
-  						<BeerList data={this.data.beers}/>
+  						<BeerList data={this.getBeers.bind(this)}/>
   					</div>
 
   					<div className="col-md-offset-2 col-md-6">
-  						<BarChart data={this.mapData()} width="480" height="320"/>
+  						<BarChart data={this.mapData.bind(this)} width="480" height="320"/>
   					</div>
   				</div>
   			</div>

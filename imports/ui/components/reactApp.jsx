@@ -5,6 +5,7 @@ import Task from './Task.jsx';
 import BeerForm from '/imports/ui/components/beer/beerform.jsx';
 import BeerList from '/imports/ui/components/beer/beerlist.jsx';
 import BarChart from '/imports/ui/components/beer/barchart.jsx';
+import beerApp from '/imports/ui/components/beer/beerApp.jsx';
 import TrackerReact from 'meteor/ultimatejs:tracker-react';
 
  // App component - represents the whole app
@@ -17,34 +18,6 @@ export default class reactApp extends TrackerReact(React.Component) {
           beersSub: Meteor.subscribe('beersPub')
         }
       }
-      this.localdata = [
-        { qty: 0, xLabel: "Sun" },
-        { qty: 0, xLabel: "Mon" },
-        { qty: 0, xLabel: "Tue" },
-        { qty: 0, xLabel: "Wed" },
-        { qty: 0, xLabel: "Thu" },
-        { qty: 0, xLabel: "Fri" },
-        { qty: 0, xLabel: "Sat" },
-      ];
-
-      //this.beers={};
-      /*this.beersHandle=Meteor.subscribe('beersPub',{
-          onReady: function () {
-             this.beers=Beers.find({}).fetch()
-             this.beers.map(function(d) {
-                this.localdata[moment(d.date).day()].qty += d.beers;
-              });
-
-              console.log("onReady And the Items actually Arrive", this);
-          },
-
-          onError: function () { console.log("onError", arguments); }
-          }
-
-
-    );*/
-    //this.beers=function(){return Beers.find({}).fetch()};
-
 
 
   }
@@ -79,20 +52,33 @@ export default class reactApp extends TrackerReact(React.Component) {
         <header>
           <h1>Todo List</h1>
         </header>
+        {this.renderTasks()}
+
+        {this.renderBeersApp()}
+
         <ul>
-          {this.renderTasks()}
-          {this.renderBeersApp()}
 
         </ul>
       </div>
     );
   }
-  mapData() {
-    return this.localdata;
-  }
 
   renderBeersApp() {
     //console.log("renderBeersApp... ");
+    var theBeers=Beers.find({}).fetch();
+
+    var data = [
+      { qty: 0, xLabel: "Sun" },
+      { qty: 0, xLabel: "Mon" },
+      { qty: 0, xLabel: "Tue" },
+      { qty: 0, xLabel: "Wed" },
+      { qty: 0, xLabel: "Thu" },
+      { qty: 0, xLabel: "Fri" },
+      { qty: 0, xLabel: "Sat" },
+    ];
+    theBeers.map(function(d) {data[moment(d.date).day()].qty += d.beers;});
+
+
 
     return (
       <div>
@@ -109,12 +95,12 @@ export default class reactApp extends TrackerReact(React.Component) {
   				<div className="row">
             <div className="col-md-4">
   						<BeerForm />
-              <BeerList data={this.getBeers()}/>
+              <BeerList data={theBeers}/>
 
   					</div>
 
   					<div className="col-md-offset-2 col-md-6">
-  						<BarChart data={this.mapData()} width="480" height="320"/>
+  						<BarChart data={data} width="480" height="320"/>
   					</div>
   				</div>
   			</div>

@@ -21,7 +21,7 @@ export default class BeerForm extends Component {
 		//var numBeers = ReactDOM.findDOMNode(this.refs.numBeers);
 		//var beerDate = ReactDOM.findDOMNode(this.refs.beerDate);
 
-		Meteor.call("insertBeer", this._numBeers.value, moment(this._numBeers.value).toDate(), function(e, r) {
+		Meteor.call("insertBeer", this._numBeers.value, moment(this._beerDate.value).toDate(), function(e, r) {
 			if (e) alert(e.reason)
 		});
 

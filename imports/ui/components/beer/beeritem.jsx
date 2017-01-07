@@ -13,8 +13,8 @@ export default class BeerItem extends Component {
 	render() {
     var localLocale=moment(this.props.beer.date);
 		var date = moment(this.props.beer.date).format("DD/MM/YYYY");
-    console.log("date:",this.props.beer.date);
-    console.log(date,"....",localLocale);
+    //console.log("date:",this.props.beer.date);
+    //console.log(date,"....",localLocale);
 		var tail = this.props.beer.beers > 1 ? "beers" : "beer";
 
 		return (
