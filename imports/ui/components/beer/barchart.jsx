@@ -1,6 +1,11 @@
-BarChart = React.createClass({
 
-	updateChart: function(props) {
+import React, { Component, PropTypes  } from 'react';
+export default class BarChart extends Component {
+	  constructor(props) {
+	    super(props);
+		}
+
+	updateChart(props) {
 	    var data = props.data;
 
 	    var max = _.max(_.pluck(data, "qty"));
@@ -17,11 +22,11 @@ BarChart = React.createClass({
     	var bars = svg.selectAll("rect").data(data);
     	bars.enter()
 	        .append("rect")
-	        .attr("fill", "orange")	        
+	        .attr("fill", "orange")
 
 	    bars.transition()
 	    	.duration(1000)
-	    	.attr("x", function(d, i) {	    		
+	    	.attr("x", function(d, i) {
 	          return xScale(i);
 	        })
 	        .attr("y", function(d, i) {
@@ -43,15 +48,15 @@ BarChart = React.createClass({
 	    	  .attr("text-anchor", "middle")
 
 	    qtyLabel.transition()
-	    	.duration(1000)									
+	    	.duration(1000)
 			.attr("x", function(d, i) {
 				return xScale(i) + xScale.rangeBand()/2;
 			})
 			.attr("y", function(d, i) {
 				return props.height - yScale(d.qty) - 25
 			})
-			.text(function(d, i) { 	    	  	
-				return d.qty; 
+			.text(function(d, i) {
+				return d.qty;
 			});
 
 	   	var xLabel = svg.selectAll(".xLabel").data(data);
@@ -59,42 +64,45 @@ BarChart = React.createClass({
 	    	  .append("text")
 	    	  .attr("class", "xLabel")
 
-	    xLabel.text(function(d, i) { 	    	  	
-	    	  	return d.xLabel; 
+	    xLabel.text(function(d, i) {
+	    	  	return d.xLabel;
 	    	  })
 	    	  .attr("text-anchor", "middle")
 	    	  .attr("x", function(d, i) {
 	    	  	return xScale(i) + xScale.rangeBand()/2;
 	    	  })
 	    	  .attr("y", function(d, i) {
-	    	  	return props.height - 5; 
+	    	  	return props.height - 5;
 	    	  });
-	},
+	}
 
-	componentDidMount: function() {		
+	componentDidMount() {
   		var el = ReactDOM.findDOMNode(this); // This is de div we are rendering
   		var svg = d3.select(el)
   				.append("svg")
   				.attr("width", this.props.width)
   				.attr("height", this.props.height);
-  		  		
+
   		this.updateChart(this.props);
-  	},
+  	}
 
-  	componentWillUpdate: function(nextProps) {  		
+  	componentWillUpdate(nextProps) {
   		this.updateChart(nextProps);
-  	},
+  	}
 
-	getDefaultProps: function() {
-		return {
-		  width: 640,
-		  height: 480
-		}
-	},
 
-    render: function() {
+    render() {
         return (
-        	<div className="chart"></div>            
+        	<div className="chart"></div>
         );
     }
-});
+};
+BarChart.propTypes={
+	 width: React.PropTypes.string.isRequired,
+	 height: React.PropTypes.string.isRequired
+};
+
+BarChart.getDefaultProps={
+		width: 640,
+		height: 480
+};

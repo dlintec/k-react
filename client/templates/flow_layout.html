@@ -5,6 +5,12 @@
           <div id="main">
                 {{> Template.dynamic template=main}}
           </div>
+          {{# each pages }}
+            <a href="{{ path }}">
+              {{ title }}
+            </a>
+          {{/ each }}
+
       </div>
 </template>
 

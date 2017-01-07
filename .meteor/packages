@@ -45,3 +45,5 @@ kadira:blaze-layout
 react
 d3js:d3
 momentjs:moment
+react-meteor-data
+ultimatejs:tracker-react
