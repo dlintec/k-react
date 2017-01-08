@@ -1,9 +1,10 @@
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Lato",sans-serif;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #888888;
-    background-color: #c8ccd4;
+    font-weight: 300;
+    color: #a7acb6;
+    background-color: #425270;
 }
 .section,
 .title-section {
@@ -23,33 +24,104 @@ body {
   background-position: center;
   background-size: cover;
 }
+.accounts-dialog {
+    border: 0px solid #cccccc;
+    z-index: 1000;
+    background: #dddddd);
+    border-radius: 0px;
+    padding: 8px 12px;
+    margin: -8px -12px 0 -12px;
+    width: 250px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .9);
+    -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    color: #333;
+}
+.panel {
+    margin-bottom: 20px;
+    background-color: #282d39;
+    border: 0px solid transparent;
+    border-radius: 0px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .3);
+}
+.panel-default > .panel-heading {
+    padding: 10px 15px;
+    background-color: #16171b;
+    border-bottom: 0px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: rgb(203, 204, 208);
+}
 .form-group label.control-label {
     font-size: 14px;
-        color: rgba(0, 0, 0, 0.58);
+        color: rgba(200, 200, 200, 0.58);
 }
 
+
 .form-control {
-border-radius: 0px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #ffffff;
+    background-color: #3b4055;
+    background-image: none;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #f5f5f5;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 255, 255, 1);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(255, 255, 255, 1);
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid rgba(135, 135, 135, 0.53);
+}
+.btn-default {
+    color: #e5e5e5;
+    background-color: rgba(51, 51, 51, 0.45);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 .btn, .input-group-btn .btn {
-  font-weight: 800;
-  border-radius: 1px;
+  font-weight: 400;
+  border-radius: 0px;
   #background:rgba(0, 0, 0, 0.12)
   -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
+  -box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
 
 }
 .btn-primary {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.9);
-    border-color: rgba(0, 0, 0, 0.9);
+    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.54);
-    border-color: rgba(0, 0, 0, 0.54);
+    border-color: rgba(255, 255, 255, 0.2);
 
+}
+.bt {
+  border: 0;
 }
 code {
     padding: 2px 4px;
@@ -63,7 +135,7 @@ code {
     background-color: #f7f7f7;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid rgba(153, 153, 153, 0.34);
+    border: 0px solid rgba(153, 153, 153, 0.34);
     /* border: 1px solid rgba(0, 0, 0, .2); */
     border-radius: 0px;
     outline: 0;
@@ -71,14 +143,23 @@ code {
     box-shadow: 0 3px 9px rgba(0, 0, 0, .5);
 }
 .orion-bootstrap-admin {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
 
 }
-
+.orion-bootstrap-admin h1.title {
+    font-weight: 100;
+}
 
 .orionSummernote .note-editor .note-toolbar {
-    background: #c1c1c1;
+    background: rgba(0,0,0, 0.53);
+}
+.note-editor .note-editing-area .note-editable {
+    padding: 10px;
+    overflow: auto;
+    color: #ffffff;
+    background-color: rgba(0,0,0, 0.39);
+    outline: 0;
 }
 .dropdown-menu {
     position: absolute;
@@ -106,7 +187,7 @@ code {
     min-height: 20px;
     #padding: 19px;
     margin-bottom: 20px;
-    background-color: #fefefe;
+    background-color: #1b1f2a;
     border: 1px solid rgba(227, 227, 227, 0);
     border-radius: 1px;
     -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, .3);
@@ -133,6 +214,7 @@ code {
   font-size: 3vh;
   font-weight: 400;
 }
+
 .navbar-default .navbar-nav > li > a:hover {
     color: #eee;
 }
@@ -161,14 +243,20 @@ color: #eee;
   color: white;
 }
 .label-primary {
-    background-color: #9d9d9d;
+    background-color: rgba(#777d85, 0.89);
+}
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus {
+    color: #ccc;
+    cursor: not-allowed;
+    background-color: rgba(44, 51, 80, 0.42);
+    border-color: rgb(66, 82, 112);
 }
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
     z-index: 3;
-    color: #fff;
+    color: #ccc;
     cursor: default;
-    background-color: #9d9d9d;
-    border-color: #9d9d9d;
+    background-color: rgba(51, 51, 51, 0.42);
+    border-color: rgb(66, 82, 112);
 }
 .col-sm-offset-2 {
     margin-left: 5%;
