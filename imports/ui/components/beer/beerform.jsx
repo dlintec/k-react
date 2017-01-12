@@ -40,7 +40,7 @@ export default class BeerForm extends Component {
 				  <div className="form-group">
 				    <div className="col-sm-10">
 				      <input type="number" className="form-control"
-				      		placeholder="Cuantos Vasos?" ref={(c) => this._numBeers = c} />
+				      		placeholder="Cuantas tasas?" ref={(c) => this._numBeers = c} />
 				    </div>
 				  </div>
 				  <div className="form-group">

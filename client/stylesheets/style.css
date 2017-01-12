@@ -162,7 +162,7 @@ hr {
 .btn-danger {
     color: #fff;
     background-color: #a43633;
-    border-color: #a43633;
+    border-color: rgba(255, 255, 255, 0.2);
 }
 .btn-danger:hover {
     color: #fff;
