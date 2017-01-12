@@ -104,7 +104,7 @@ i18n.map('es', {
   },
   collections: {
     create: {
-      title: 'Crear un {$1}'
+      title: 'Crear {$1}'
     },
     update: {
       title: 'Actualizar {$1}'
@@ -124,6 +124,13 @@ i18n.map('es', {
     }
   },
   dictionary: {
+    schema: {
+      site:{
+        title: 'Título',
+        description: 'Descripción',
+
+      }
+    },
     update: {
       title: 'Diccionario'
     }
@@ -141,7 +148,7 @@ i18n.map('es', {
       url: 'Url',
     },
     index: {
-      title: 'Páginas',
+      title: 'Páginas-',
     },
     create: {
       title: 'Crear página',

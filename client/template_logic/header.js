@@ -17,3 +17,20 @@ Template.header.events({
     }, 500);
   }
 });
+Template.header.onCreated(function() {
+  const pagesHandle=this.subscribe('pages');
+  this.autorun(() => {
+    FlowRouter.watchPathChange();
+    const pagesIsReady = pagesHandle.ready();
+
+    console.log(`Header Pages Handle is ${pagesIsReady ? 'ready' : 'not ready'}`);
+    document.title = orion.dictionary.get('site.title', 'dlintec');
+  });
+});
+
+Template.header.helpers({
+
+  pagesHelper:function(){
+    return  pages.find({}, {sort: {order: 1}});
+  },
+});

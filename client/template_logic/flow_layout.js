@@ -6,6 +6,7 @@ import React from 'react';
 Template.flow_layout.onCreated(function() {
   const pagesHandle=this.subscribe('pages');
   this.autorun(() => {
+    FlowRouter.watchPathChange();
     const pagesIsReady = pagesHandle.ready();
 
     console.log(`Pages Handle is ${pagesIsReady ? 'ready' : 'not ready'}`);

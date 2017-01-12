@@ -11,20 +11,28 @@
         </button>
 
         <a class="navbar-brand" href="/#">
-          <i class="fa fa-home fa-lg" aria-hidden="true"></i>
-            {{dict 'site.title'}} {{> loginButtons}}
+          <!-- <i class="fa fa-home fa-lg" aria-hidden="true"></i> -->
+          <img src="{{ dict 'site.logo.url' }}" width="{{ dict 'site.logo.info.width' }}">
        </a>
       </div>
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav navbar-left">
-          {{#each sections}}
-            {{> headerLink}}
-          {{/each}}
+          <li><a class="k-account-nav" href="{{ path }}">{{> loginButtons}}</a> </li>
+
+          {{# each pages }}
+            <li><a class="btn btn-default btn-file btn-xs" href="{{ path }}">
+              {{ title }}
+            </a></li>
+
+
+          {{/ each }}
         </ul>
+
       </div>
     </div>
   </header>
+
 </template>
 
 <template name="headerLink">
