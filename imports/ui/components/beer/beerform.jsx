@@ -33,14 +33,14 @@ export default class BeerForm extends Component {
 		return (
 			<div className="panel panel-default">
 			  <div className="panel-heading">
-			    <h3 className="panel-title">Beer Consumption</h3>
+			    <h3 className="panel-title">Consumo</h3>
 			  </div>
 			  <div className="panel-body">
 			    <form className="form-horizontal" onSubmit={this.handleSubmit.bind(this)}>
 				  <div className="form-group">
 				    <div className="col-sm-10">
 				      <input type="number" className="form-control"
-				      		placeholder="How many beers?" ref={(c) => this._numBeers = c} />
+				      		placeholder="Cuantos Vasos?" ref={(c) => this._numBeers = c} />
 				    </div>
 				  </div>
 				  <div className="form-group">

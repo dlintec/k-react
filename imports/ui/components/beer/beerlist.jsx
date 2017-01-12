@@ -20,8 +20,8 @@ export default class BeerList extends Component {
 		return (
 			<div className="panel panel-default">
 			  <div className="panel-heading">
-			    <h3 className="panel-title">History
-			    <small> click to remove</small>
+			    <h3 className="panel-title">Histórico
+			    <small> click para eliminar</small>
 			    </h3>
 			  </div>
 			  <div className="panel-body">

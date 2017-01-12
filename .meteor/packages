@@ -35,7 +35,6 @@ standard-minifier-css
 standard-minifier-js
 shell-server
 nicolaslopezj:roles
-accounts-ui
 aldeed:collection2-core
 aldeed:schema-deny
 aldeed:schema-index
@@ -47,3 +46,11 @@ d3js:d3
 momentjs:moment
 react-meteor-data
 ultimatejs:tracker-react
+accounts-password
+accounts-ui
+useraccounts:bootstrap
+accounts-facebook
+accounts-google
+accounts-twitter
+accounts-github
+react-template-helper

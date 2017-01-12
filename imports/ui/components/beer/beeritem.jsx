@@ -15,10 +15,10 @@ export default class BeerItem extends Component {
 		var date = moment(this.props.beer.date).format("DD/MM/YYYY");
     //console.log("date:",this.props.beer.date);
     //console.log(date,"....",localLocale);
-		var tail = this.props.beer.beers > 1 ? "beers" : "beer";
+		var tail = this.props.beer.beers > 1 ? "tasas" : "tasa";
 
 		return (
-			<li onClick={this.handleClick.bind(this)}>On <strong>{date}</strong> grabbed <strong>{this.props.beer.beers}</strong> {tail}</li>
+			<li onClick={this.handleClick.bind(this)}>El <strong>{date}</strong> se tomaron <strong>{this.props.beer.beers}</strong> {tail}</li>
 		);
 	}
 }

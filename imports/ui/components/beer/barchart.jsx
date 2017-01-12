@@ -48,6 +48,7 @@ export default class BarChart extends Component {
 	    	  .style("font-weight", "bold")
 	    	  .attr("text-anchor", "middle")
 
+
 	    qtyLabel.transition()
 	    	.duration(1000)
 			.attr("x", function(d, i) {

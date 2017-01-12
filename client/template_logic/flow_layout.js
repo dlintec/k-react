@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import reactApp from '../../imports/ui/components/reactApp.jsx';
+
 
 Template.flow_layout.onCreated(function() {
   const pagesHandle=this.subscribe('pages');

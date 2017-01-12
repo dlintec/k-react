@@ -24,10 +24,6 @@ export default class reactApp extends TrackerReact(React.Component) {
   componentWillUnmount() {
       this.state.subscription.beersSub.stop();
   }
-  //tracker-based reactivity in action, no need for `getMeteorData`!
-  getBeers() {
-      return Beers.find({}).fetch(); //fetch must be called to trigger reactivity
-  }
 
   getTasks() {
   //console.log("getTasks...");
@@ -49,10 +45,10 @@ export default class reactApp extends TrackerReact(React.Component) {
   render() {
     return (
       <div className="container">
-        <header>
+      {/*}  <header>
           <h1>Todo List</h1>
         </header>
-        {this.renderTasks()}
+        {this.renderTasks()} */}
 
         {this.renderBeersApp()}
 
@@ -64,7 +60,12 @@ export default class reactApp extends TrackerReact(React.Component) {
   }
 
   renderBeersApp() {
-    //console.log("renderBeersApp... ");
+    var testattr=orion.attribute('image', {
+     label: "Background image (optional)",
+     optional: true
+   })
+   console.log("renderBeersApp... ",testattr);
+
     var theBeers=Beers.find({}).fetch();
 
     var data = [
@@ -86,8 +87,8 @@ export default class reactApp extends TrackerReact(React.Component) {
   		   <div className="page-header">
   					<center>
   						<h1>
-  						<i className="fa fa-beer"></i> Beer
-  						<small> Dashboard</small></h1>
+  						<i className="fa fa-coffee "></i> Tasas
+  						 por dia</h1>
   					</center>
   			</div>
 
