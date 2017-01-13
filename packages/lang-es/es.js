@@ -148,7 +148,7 @@ i18n.map('es', {
       url: 'Url',
     },
     index: {
-      title: 'Páginas-',
+      title: 'Páginas',
     },
     create: {
       title: 'Crear página',
