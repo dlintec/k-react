@@ -101,7 +101,7 @@ export default class reactApp extends TrackerReact(React.Component) {
   					</div>
 
   					<div className="col-md-offset-2 col-md-6">
-  						<BarChart data={data} width="480" height="320"/>
+  						<BarChart data={data} width="300" height="320"/>
   					</div>
   				</div>
   			</div>

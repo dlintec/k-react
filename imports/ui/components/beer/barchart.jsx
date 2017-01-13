@@ -105,6 +105,6 @@ BarChart.propTypes={
 };
 
 BarChart.getDefaultProps={
-		width: 640,
+		width: 200,
 		height: 480
 };
