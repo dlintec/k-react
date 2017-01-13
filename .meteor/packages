@@ -47,10 +47,10 @@ momentjs:moment
 react-meteor-data
 ultimatejs:tracker-react
 accounts-password
-accounts-ui
 useraccounts:bootstrap
 accounts-facebook
 accounts-google
 accounts-twitter
 accounts-github
 react-template-helper
+accounts-ui
