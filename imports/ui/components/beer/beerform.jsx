@@ -39,7 +39,7 @@ export default class BeerForm extends Component {
 			    <form className="form-horizontal" onSubmit={this.handleSubmit.bind(this)}>
 				  <div className="form-group">
 				    <div className="col-sm-10">
-				      <input type="number" className="form-control" value="1"
+				      <input type="number" className="form-control" defaultValue="1"
 				      		placeholder="Cuantas tasas?" ref={(c) => this._numBeers = c} />
 				    </div>
 				  </div>
@@ -51,7 +51,7 @@ export default class BeerForm extends Component {
 
 				  <div className="form-group">
 				    <div className="col-sm-10">
-				      <button type="submit" className="btn btn-primary btn-block">Add</button>
+				      <button type="submit" className="btn btn-primary btn-block">Agregar</button>
 				    </div>
 				  </div>
 				</form>
