@@ -151,6 +151,13 @@ hr {
     border: 1px solid rgba(255, 255, 255, 0.34);
     border-radius: 0px;
 }
+#configure-login-service-dialog {
+    width: 530px;
+    margin-left: -269px;
+    margin-top: -300px;
+    font-size: 14px;
+
+}
 .accounts-dialog input[type=text][type], .accounts-dialog input[type=email][type], .accounts-dialog input[type=password][type] {
     height: auto;
     background-color: rgba(0, 0, 0, 0.5);
