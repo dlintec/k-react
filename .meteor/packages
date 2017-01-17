@@ -48,9 +48,6 @@ react-meteor-data
 ultimatejs:tracker-react
 accounts-password
 useraccounts:bootstrap
-accounts-facebook
-accounts-google
-accounts-twitter
-accounts-github
 react-template-helper
-accounts-ui
+timbrandin:image-resize-client
+useraccounts:flow-routing@1.14.3

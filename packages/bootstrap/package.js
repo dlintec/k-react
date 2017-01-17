@@ -16,7 +16,7 @@ Package.onUse(function(api) {
     'less@2.5.0_1',
     'aldeed:autoform@5.7.1',
     'aldeed:tabular@1.1.0',
-    'useraccounts:bootstrap@1.11.1'
+    'useraccounts:bootstrap@1.14.2'
     ]);
 
   api.imply([
