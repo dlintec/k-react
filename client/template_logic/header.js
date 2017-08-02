@@ -10,13 +10,16 @@ Template.header.events({
       scrollTop: section.offset().top
     }, 1000, function() { Session.set('scrolling', false);});
   },
-
+  'click .logout': function(event){
+		event.preventDefault();
+		AccountsTemplates.logout();
+	},
   'click .navbar-brand': function(){
     $('html, body').animate({
       scrollTop: 0
     }, 500);
   }
-});
+}); 
 Template.header.onCreated(function() {
   const pagesHandle=this.subscribe('pages');
   this.autorun(() => {
