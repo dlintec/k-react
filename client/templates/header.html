@@ -14,12 +14,23 @@
           <!-- <i class="fa fa-home fa-lg" aria-hidden="true"></i> -->
           <img src="{{ dict 'site.logo.url' }}" width="{{ dict 'site.logo.info.width' }}">
        </a>
+       <a class="navbar-brand" href="/#">
+         <!-- <i class="fa fa-home fa-lg" aria-hidden="true"></i> -->
+         Inicio <i class="fa fa-html5"></i> 
+      </a>
+
+
       </div>
 
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="nav navbar-nav navbar-left">
           <!--<li><a class="k-account-nav" href="{{ path }}">{{> loginButtons}}</a> </li>-->
+          {{#if currentUser }}
+            <a href="#" class="logout navbar-brand"><i class="fa fa-sign-out"></i>Salir</a>
+          {{else}}
+          <a href="/login" class="login navbar-brand"><i class="fa fa-sign-in"></i> Log in</a>
 
+          {{/if}}
           {{# each pages }}
             <li><a class="btn btn-default btn-file btn-xs" href="{{ path }}">
               {{ title }}
@@ -31,6 +42,7 @@
 
       </div>
     </div>
+
   </header>
 
 </template>
