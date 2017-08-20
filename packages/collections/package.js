@@ -1,7 +1,7 @@
 Package.describe({
   name: 'orionjs:collections',
   summary: 'Meteor collection with some magic',
-  version: '1.8.0',
+  version: '1.8.1',
   git: 'https://github.com/orionjs/orion'
 });
 
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
-    'orionjs:base@1.8.0',
+    'orionjs:base@1.8.1',
     'underscore',
     'aldeed:simple-schema@1.3.3',
     'aldeed:collection2@2.5.0',

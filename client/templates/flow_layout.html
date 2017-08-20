@@ -1,33 +1,12 @@
 <template name="flow_layout">
+
       <div class="layout-page" style="background-color:{{dict 'site.defaultColour' '#ffffff'}}">
           <div id="top">
-          {{> Template.dynamic template=top}}
+            {{> Template.dynamic template=top}}
           </div>
-          <div id="main">
-                {{> Template.dynamic template=main}}
+          <div id="main" >
+              {{> Template.dynamic template=main}}
           </div>
-        <!--  {{# each pages }}
-            <a class="btn" href="{{ path }}">
-              {{ title }}
-            </a>
-          {{/ each }} -->
-
       </div>
-</template>
 
-<template name="dataTest">
-  <h1>This is a test</h1>
-  <h3>All Pages</h3>
-  {{# each pages }}
-    <a href="{{ path }}">
-      {{ title }}
-    </a>
-  {{/ each }}
-
-  <h3>Some Pages</h3>
-  {{# each pages template="pagesSimple" }}
-    <a href="{{ path }}">
-      {{ title }}
-    </a>
-  {{/ each }}
 </template>

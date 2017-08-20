@@ -9,16 +9,21 @@ Template.mainPage.helpers({
   sections: function(){
       return Sections.find({}, {sort: {order: 1}});
   }
-});
-Template.mainPage.onRendered(function(){
 
-  scrollToPath();
-  updateOnScroll();
 });
+
 Template.mainPage.onCreated(function () {
-  var self = this;
-  self.subscribe("sectionsPub");
-  
+
+  const sectionsHandle=this.subscribe( 'sectionsPub');
+  this.autorun(() => {
+    FlowRouter.watchPathChange();
+
+    const sectionsIsReady = sectionsHandle.ready();
+    console.log(`mainPage Handle is ${sectionsIsReady ? 'ready' : 'not ready'}`);
+    //Session.set('lang', userLang);
+
+    //document.title = orion.dictionary.get('site.title', 'dlintec');
+  });
 });
 
 function scrollToPath(){

@@ -11,8 +11,8 @@ Package.onUse(function(api) {
   api.use([
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
-    'orionjs:base@1.8.0',
-    'orionjs:attributes@1.8.0',
+    'orionjs:base@1.8.1',
+    'orionjs:attributes@1.8.1',
     'accounts-base',
     'accounts-password',
     'useraccounts:core@1.12.0',
@@ -21,7 +21,7 @@ Package.onUse(function(api) {
     'meteorhacks:inject-initial@1.0.2',
     ]);
 
-  api.use(['aldeed:tabular@1.2.0', 'nicolaslopezj:tabular-materialize@1.2.1'], {
+  api.use(['aldeed:tabular@1.6.1', 'nicolaslopezj:tabular-materialize@1.2.1'], {
   		weak: true
   	});
 

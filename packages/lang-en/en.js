@@ -10,7 +10,8 @@ i18n.map('en', {
     choose: 'Choose',
     noPermission: 'You have no permissions',
     passwordNotMatch: 'Passwords doesn\'t match',
-    optional: 'Optional'
+    optional: 'Optional',
+    start: 'Home'
   },
   accounts: {
     schema: {

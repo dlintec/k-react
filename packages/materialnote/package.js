@@ -1,6 +1,6 @@
 Package.describe({
     name: 'orionjs:materialnote',
-    version: '1.8.0',
+    version: '1.8.1',
     // Brief, one-line summary of the package.
     summary: 'MaterialNote for orionjs',
     // URL to the Git repository containing the source code for this package.
@@ -15,9 +15,9 @@ Package.onUse(function (api) {
     api.use([
         'blaze-html-templates@1.0.1',
         'ecmascript@0.1.6',
-        'orionjs:base@1.8.0',
-        'orionjs:attributes@1.8.0',
-        'orionjs:filesystem@1.8.0',
+        'orionjs:base@1.8.1',
+        'orionjs:attributes@1.8.1',
+        'orionjs:filesystem@1.8.1',
         'vojtechklos:materialnote@1.2.2',
         'less@2.5.0_2',
         'jquery'

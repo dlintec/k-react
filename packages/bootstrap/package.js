@@ -12,10 +12,10 @@ Package.onUse(function(api) {
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
     'meteor-platform',
-    'orionjs:core@1.8.0',
+    'orionjs:core@1.8.1',
     'less@2.5.0_1',
-    'aldeed:autoform@5.7.1',
-    'aldeed:tabular@1.1.0',
+    'aldeed:autoform@5.8.1',
+    'aldeed:tabular@1.6.1',
     'useraccounts:bootstrap@1.14.2'
     ]);
 

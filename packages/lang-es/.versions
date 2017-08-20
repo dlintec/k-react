@@ -22,8 +22,8 @@ meteor@1.1.10
 minifiers@1.1.7
 mongo-id@1.0.1
 observe-sequence@1.0.7
-orionjs:lang-en@1.8.0
-orionjs:lang-es@1.8.0
+orionjs:lang-es@1.8.1
+orionjs:lang-es@1.8.1
 promise@0.5.1
 random@1.0.5
 reactive-var@1.0.6

@@ -1,7 +1,7 @@
 <template name="orionBootstrapCollectionsIndex">
   {{# Layout template="orionBootstrapMediumContentOffset" }}
     {{# Layout template="orionBootstrapTitle" }}
-      {{ collection.title }}
+      {{_ collection.title }}
       {{# if collection.canShowCreate }}
         <a href="{{ collection.createPath }}" class="btn btn-default btn-xs"><i class="fa fa-plus"></i></a>
       {{/ if }}

@@ -1,7 +1,7 @@
 Package.describe({
   name: 'orionjs:filesystem',
   summary: 'Orion Filesystem',
-  version: '1.8.0',
+  version: '1.8.1',
   git: 'https://github.com/orionjs/orion',
 });
 
@@ -11,7 +11,7 @@ Package.onUse(function(api) {
   api.use([
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
-    'orionjs:base@1.8.0',
+    'orionjs:base@1.8.1',
     'aldeed:collection2@2.3.3',
     ]);
 
