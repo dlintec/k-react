@@ -87,8 +87,7 @@ export default class reactApp extends TrackerReact(React.Component) {
   		   <div className="page-header">
   					<center>
   						<h1>
-  						<i className="fa fa-coffee "></i> Tasas
-  						 por dia</h1>
+  						<i className="fa fa-coffee "></i> cuantas</h1>
   					</center>
   			</div>
 

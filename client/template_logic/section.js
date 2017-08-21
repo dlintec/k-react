@@ -10,3 +10,15 @@ Template.section.helpers({
     return !!this.backgroundImage;
   }
 });
+Template.section.events({
+
+  'click .scroll-home': function(){
+    console.log(`home from section`);
+
+    Session.set('scrolling', true);
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  },
+
+});

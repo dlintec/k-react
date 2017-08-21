@@ -1,3 +1,6 @@
+
+
+
 Template.orionBootstrapCollectionsIndex.events({
   'click tr': function(event) {
     if (!$(event.target).is('td')) return;
@@ -13,7 +16,9 @@ Template.orionBootstrapCollectionsIndex.events({
   }
 });
 
+
 Template.orionBootstrapCollectionsIndex.onRendered(function() {
+
   this.autorun(function () {
     RouterLayer.isActiveRoute('');
     Session.set('orionBootstrapCollectionsIndex_showTable', false);
@@ -21,6 +26,7 @@ Template.orionBootstrapCollectionsIndex.onRendered(function() {
       Session.set('orionBootstrapCollectionsIndex_showTable', true);
     });
   });
+
 })
 
 Template.orionBootstrapCollectionsIndex.helpers({

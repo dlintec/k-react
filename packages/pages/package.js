@@ -12,12 +12,12 @@ Package.onUse(function(api) {
 		'blaze-html-templates@1.0.1',
 		'ecmascript@0.1.6',
 		'meteor-platform',
-		'orionjs:base@1.8.0',
+		'orionjs:base@1.8.1',
 		'aldeed:collection2@2.3.3',
-		'aldeed:autoform@5.4.0'
+		'aldeed:autoform@5.8.1'
 		]);
 
-	api.use(['aldeed:tabular@1.2.0', 'nicolaslopezj:tabular-materialize@1.2.1'], {
+	api.use(['aldeed:tabular@1.6.1', 'nicolaslopezj:tabular-materialize@1.2.1'], {
 		weak: true
 	});
 

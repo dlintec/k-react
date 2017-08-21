@@ -39,7 +39,7 @@ id-map@1.0.4
 jquery@1.11.4
 launch-screen@1.0.4
 livedata@1.0.15
-local-test:orionjs:base@1.8.0
+local-test:orionjs:base@1.8.1
 localstorage@1.0.5
 logging@1.0.8
 meteor@1.1.10
@@ -59,9 +59,9 @@ npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 ordered-dict@1.0.4
-orionjs:base@1.8.0
+orionjs:base@1.8.1
 orionjs:core@0.0.6
-orionjs:lang-en@1.8.0
+orionjs:lang-es@1.8.1
 promise@0.5.1
 random@1.0.5
 rate-limit@1.0.0

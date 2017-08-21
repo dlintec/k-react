@@ -1,7 +1,7 @@
 Package.describe({
   name: 'orionjs:file-attribute',
   summary: 'File attribute for orion',
-  version: '1.8.0',
+  version: '1.8.1',
   git: 'http://github.com/orionjs/orion'
 });
 
@@ -11,9 +11,9 @@ Package.onUse(function(api) {
   api.use([
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
-    'orionjs:base@1.8.0',
-    'orionjs:attributes@1.8.0',
-    'orionjs:filesystem@1.8.0',
+    'orionjs:base@1.8.1',
+    'orionjs:attributes@1.8.1',
+    'orionjs:filesystem@1.8.1',
     'less@2.5.0_1'
     ]);
 

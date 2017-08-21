@@ -1,7 +1,7 @@
 Package.describe({
   name: 'orionjs:attributes',
   summary: 'Orion attributes',
-  version: '1.8.0',
+  version: '1.8.1',
   git: 'https://github.com/orionjs/orion'
 });
 
@@ -12,9 +12,9 @@ Package.onUse(function(api) {
     'blaze-html-templates@1.0.1',
     'ecmascript@0.1.6',
     'check',
-    'orionjs:base@1.8.0',
+    'orionjs:base@1.8.1',
     'aldeed:collection2@2.0.0',
-    'aldeed:autoform@5.4.0',
+    'aldeed:autoform@5.8.1',
     'momentjs:moment@2.10.3'
     ]);
 
