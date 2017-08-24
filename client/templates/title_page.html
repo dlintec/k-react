@@ -1,6 +1,6 @@
 <template name="titlePage">
   <h4>+</h4>
-  <div class="img-hero" style="background-image: url({{dict 'site.heroImage.url'}})" >
+  <div class="img-hero" style="background-image: url({{gridfsURL (dict 'site.heroImage.url')}})" >
   </div>
   <div class="container" style="min-height:70vh">
     <p class="section-normal">{{{dict 'site.main_content' 'Main Content'}}}</p>
@@ -16,7 +16,7 @@
             <a class="scroll-link section-thumb"  href="{{ id }}">
               <div class="media">
                 <div class="media-left">
-                  <img src="{{ thumb.url }}" class="media-object" style="width:100px;">
+                  <img src="{{ gridfsURL thumb.url }}" class="media-object" style="width:100px;">
                   <p></p>
                 </div>
                 <div class="media-body">
@@ -40,7 +40,8 @@
          <a href="/login" class="btn btn-default btn-file btn-xs"><i class="fa fa-sign-in"></i> Log in</a>
     {{/if}}
     <!--p>{{> i18n_buttons class="btn btn-danger"}}</p-->
-    <p>{{_ "hello"}}</p>
+    <p>{{_ "hello"}} Mobile</p>
+
   </div>
   <!--div class="title-section overlay" >
 

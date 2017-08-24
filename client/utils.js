@@ -25,6 +25,8 @@ scrollToSection=function(e){
 
 
 } ;
+
+
 scrollToHome=function(){
   Session.set('scrolling', true);
   $('html, body').animate({
@@ -54,3 +56,13 @@ commonString=function (lcstest, lcstarget) {
   result = "";
   return result;
  }
+gridfsURL=function(pURL) {
+  var urlParams=parse_url(Meteor.absoluteUrl(pURL));
+  var abs_url=urlParams.scheme+'://'+urlParams.authority+pURL
+  //console.log('gridfsURL helper:',abs_url);
+  //  new_value.url=abs_url;
+
+  return abs_url;
+}
+
+ Template.registerHelper('gridfsURL', gridfsURL);

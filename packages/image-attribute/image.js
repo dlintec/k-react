@@ -3,7 +3,8 @@ ReactiveTemplates.onRendered('attribute.image', function () {
   Session.set('image_base64' + this.data.name, null);
   Session.set('isUploading' + this.data.name, false);
   Session.set('image' + this.data.name, this.data.value);
-});
+    }
+);
 
 ReactiveTemplates.helpers('attribute.image', {
   base64: function() {
@@ -16,7 +17,13 @@ ReactiveTemplates.helpers('attribute.image', {
     return Session.get('uploadProgress' + this.name);
   },
   image: function() {
-    return Session.get('image' + this.name);
+    var session_value=Session.get('image' + this.name);
+    var urlParams=parse_url(Meteor.absoluteUrl(session_value.url));
+    var abs_url=urlParams.scheme+'://'+urlParams.authority+session_value.url
+    //console.log('image helper:',abs_url,session_value);
+    var new_value=_.clone(session_value);
+    new_value.url=abs_url;
+    return new_value;
   }
 });
 
