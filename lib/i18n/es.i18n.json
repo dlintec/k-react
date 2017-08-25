@@ -1,6 +1,6 @@
 {
   "hello": "Saludos" ,
-   "Sections": "Secciones",
+   "sections": "Secciones",
    "simpleSchema" : {
       "errors" : {
         "required": "[label] es obligatorio",
