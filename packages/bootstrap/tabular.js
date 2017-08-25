@@ -1,6 +1,6 @@
 orion.collections.onCreated(function() {
   var self = this;
-  console.log('collection tabular',_.has(this, 'tabular'));
+  //console.log('collection tabular',_.has(this, 'tabular'));
   // if the collection doesn't has the tabular option, nothing to do here!
   if (!_.has(this, 'tabular')) return;
 
