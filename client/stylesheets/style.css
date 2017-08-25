@@ -238,15 +238,17 @@ hr {
 }
 
 .btn {
+    
     padding: 14px 24px;
     border: 0 none;
     font-weight: 700;
-    margin-left: 3px;
+    margin-right: 0px;
+    margin-bottom: 5px;
 
 
     display: inline-block;
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.1;
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -256,7 +258,7 @@ hr {
     user-select: none;
     border: 2px solid transparent;
 
-    padding: 1rem 1rem;
+    padding: .5rem 1rem;
 
     border-radius: 1rem;
     -webkit-transition: all .2s ease-in-out;
